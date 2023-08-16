@@ -90,45 +90,46 @@ export.addTocart = function (product, quantity) {
   const { addTocart } = require('./shoppingCart.js')
   */
 //////////// INTRODUCTION TO NPM ///////////
+/*
+import cloneDeep from 'lodash/cloneDeep';
 
-// import cloneDeep from 'lodash/cloneDeep';
+const state = {
+  cart: [
+    { product: 'bread', quantity: 5 },
+    { product: 'pizza', quantity: 5 },
+  ],
+  user: { loggedIn: true },
+};
+const stateClone = Object.assign({}, state);
+const stateDeepClone = cloneDeep(state);
 
-// const state = {
-//   cart: [
-//     { product: 'bread', quantity: 5 },
-//     { product: 'pizza', quantity: 5 },
-//   ],
-//   user: { loggedIn: true },
-// };
-// const stateClone = Object.assign({}, state);
-// const stateDeepClone = cloneDeep(state);
+state.user.loggedIn = false;
+console.log(stateClone);
 
-// state.user.loggedIn = false;
-// console.log(stateClone);
+console.log(stateDeepClone);
 
-// console.log(stateDeepClone);
+if (module.hot) {
+  module.hot.accept();
+}
 
-// if (module.hot) {
-//   module.hot.accept();
-// }
+class Person {
+  #greeting = 'Hey';
+  constructor(name) {
+    this.name = name;
+    console.log(`${this.#greeting}, ${this.name}`);
+  }
+}
+const jonas = new Person('Jonas');
 
-// class Person {
-//   #greeting = 'Hey';
-//   constructor(name) {
-//     this.name = name;
-//     console.log(`${this.#greeting}, ${this.name}`);
-//   }
-// }
-// const jonas = new Person('Jonas');
+console.log('Jonas' ?? null);
 
-// console.log('Jonas' ?? null);
+console.log(cart.find(el => el.quantity >= 2));
+Promise.resolve('TEST').then(x => console.log(x));
 
-// console.log(cart.find(el => el.quantity >= 2));
-// Promise.resolve('TEST').then(x => console.log(x));
+import 'core-js/stable';
+// import 'core-js/stable/array/find';
+// import 'core-js/stable/promise';
 
-// import 'core-js/stable';
-// // import 'core-js/stable/array/find';
-// // import 'core-js/stable/promise';
-
-// // Polifilling async functions
-// import 'regenerator-runtime/runtime';
+// Polifilling async functions
+import 'regenerator-runtime/runtime';
+*/
