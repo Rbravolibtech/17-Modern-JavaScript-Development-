@@ -21,3 +21,25 @@ add('bread', 5);
 add('apples', 4);
 
 console.log(cart);
+
+//////////// TOP LEVEL AWAIT (ES2022 ///////////
+// console.log('START FETCHING');
+
+// const res = await fetch('https://jsonplaceholder.typicode.com/posts');
+// const data = await res.json();
+// console.log(data);
+// console.log('something');
+
+const getLastPost = async function () {
+  const res = await fetch('https://jsonplaceholder.typicode.com/posts');
+  const data = await res.json();
+  console.log(data);
+
+  return { title: data.at(-1).title, text: data.at(-1).body };
+};
+
+const lastPost = getLastPost();
+console.log(lastPost);
+
+const lastPost2 = await getLastPost();
+console.log(lastPost2);
